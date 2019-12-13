@@ -33,6 +33,7 @@ class check{
 			loop--;
 		}
 		
+		scan.close();
 		System.out.println(count);
 	}
 }
