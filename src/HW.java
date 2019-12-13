@@ -5,10 +5,12 @@ class check{
 	Scanner scan = new Scanner(System.in); 
 	
 	void inputLoop() {
+		System.out.print("입력할 단어의 개수: ");
 		this.loop = scan.nextInt();
 	}// 루프 횟수를 입력받음
 	
 	void checkWord() {
+		System.out.println("단어를 차레대로 입력하시오");
 		while(loop>0) {
 			char inputWord[]= scan.next().toCharArray();// 단어를 입력받아 배열에 저장
 			int len = inputWord.length;
