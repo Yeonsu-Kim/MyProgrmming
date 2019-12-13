@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class check{
-	private int temp, loop, count =0;
+	private int loop, count =0;
 	Scanner scan = new Scanner(System.in); 
 	
 	void inputLoop() {
@@ -11,16 +11,17 @@ class check{
 	void checkWord() {
 		while(loop>0) {
 			char inputWord[]= scan.next().toCharArray();// 단어를 입력받아 배열에 저장
+			int len = inputWord.length;
 			
-			for (int i = 0;i<inputWord.length-1;i++) {
+			for (int i = 0;i<len - 1;i++) {
 				if (inputWord[i] == inputWord[i+1])
 					inputWord[i] = ' ';
 			}// 모여있는 같은 알파벳 중 하나만 남기고 모두 공백으로 바꿈
 			
-			temp = 0;
+			int temp = 0;
 			
-			for (int i = 0;i<inputWord.length;i++) {
-				for (int j = i+1; j<inputWord.length;j++) {
+			for (int i = 0;i<len - 1;i++) {
+				for (int j = i+1; j<len;j++) {
 					if (inputWord[i] != ' ' && inputWord[i] == inputWord[j])
 						temp++;
 				}
